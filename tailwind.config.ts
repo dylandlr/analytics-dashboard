@@ -9,7 +9,7 @@ const config: Config = {
     "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // darkMode: "class",
+    // darkMode: "class", // used for dark mode by calling dark:className in the class attribute of an element
     transparent: "transparent",
     current: "currentColor",
     extend: {
@@ -250,6 +250,7 @@ const config: Config = {
       },
     },
   },
+
   safelist: [
     {
       pattern:
@@ -279,6 +280,38 @@ const config: Config = {
         /^(fill-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,
     },
   ],
-  plugins: [require("@headlessui/tailwindcss"), require("@tailwindcss/forms")],
+  daisyui: {
+    themes: [
+      "light",
+      "dark",
+      {
+        mytheme: {
+          primary: "#057500",
+
+          secondary: "#07A500",
+
+          accent: "#0CFF02",
+
+          neutral: "#232425",
+
+          "base-100": "#232425",
+
+          info: "#60a5fa",
+
+          success: "#10b981",
+
+          warning: "#f59e0b",
+
+          error: "#dc2626",
+        },
+      },
+    ],
+  },
+
+  plugins: [
+    require("@headlessui/tailwindcss"),
+    require("@tailwindcss/forms"),
+    require("daisyui"),
+  ],
 };
 export default config;

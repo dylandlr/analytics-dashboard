@@ -1,5 +1,5 @@
-import Page from "./analytics-1/page";
+import DarkModeBtn from "./components/DarkModeBtn";
 
 export default function Home() {
-  return <div>{/* <Page /> */}</div>;
+  return <div className="navbar bg-tertiary">{<DarkModeBtn />}</div>;
 }
