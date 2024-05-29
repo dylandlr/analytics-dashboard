@@ -45,7 +45,7 @@ const Dropdown = () => {
       <div
         tabIndex={0}
         role="button"
-        className="btn btn-ghost m-1"
+        className="btn btn-ghost m-1 dark:hover:bg-dark-500 hover:bg-light-700"
         ref={refs.setReference}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -95,8 +95,8 @@ interface ClientLayoutProps {
 export default function ClientLayout({ children }: ClientLayoutProps) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <main className="bg-light dark:bg-dark">
-        <div className="navbar rounded-box drop-shadow-lg">
+      <main className="">
+        <div className="navbar rounded-box drop-shadow-lg bg-light dark:bg-dark">
           <div className="flex-none dark:text-white text-dark px-2">
             <Logo />
           </div>
@@ -116,7 +116,9 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
           </div> */}
           <div className="flex justify-end flex-1 px-2">
             <div className="flex items-stretch">
-              <a className="btn btn-ghost m-1 hover:bg-dark">{children}</a>
+              <a className="btn btn-ghost m-1 dark:hover:bg-dark-500 hover:bg-light-700">
+                {children}
+              </a>
               <Dropdown />
             </div>
           </div>
