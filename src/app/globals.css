@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* global.css or styles.css */
+/* globals.css */
+html {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Prevent transitions on initial load */
+html[data-theme="light"],
+html[data-theme="dark"] {
+  transition: none;
+}
+
+/* Enable transitions after the page has loaded */
+body.js-loaded html {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}

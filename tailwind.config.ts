@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
 import colors from "tailwindcss/colors";
-// const colors = require("tailwindcss/colors");
+
 const config: Config = {
+  darkMode: "class", // used for dark mode by calling dark:className in the class attribute of an element
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,7 +10,6 @@ const config: Config = {
     "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // darkMode: "class", // used for dark mode by calling dark:className in the class attribute of an element
     transparent: "transparent",
     current: "currentColor",
     extend: {
