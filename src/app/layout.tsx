@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={`${inter.className} light dark:bg-dark`}>
         <Providers>
           <ClientLayout>
-            <main className="container mx-auto">{children}</main>
+            <main className="">{children}</main>
           </ClientLayout>
         </Providers>
       </body>

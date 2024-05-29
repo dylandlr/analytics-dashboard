@@ -5,6 +5,12 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/stacc_logo.png"
+          />
           {/* Script to set the initial theme */}
           <script
             dangerouslySetInnerHTML={{

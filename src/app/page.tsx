@@ -7,9 +7,7 @@ const DarkModeBtn = dynamic(() => import("./components/DarkModeBtn"), {
 export default function Home() {
   return (
     <>
-      <div className="bg-light dark:bg-dark">
-        <DarkModeBtn />
-      </div>
+      <DarkModeBtn />
     </>
   );
 }
