@@ -102,7 +102,10 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
           </div>
           <div className="flex-1 px-2 lg:flex-none">
             <a className="text-lg font-bold text-dark dark:text-light">
-              Stacc Dashboard
+              Stacc.
+              <text className="dark:text-tertiary text-secondary">
+                Dashboard
+              </text>
             </a>
           </div>
           {/* to make the navigation div in the center in the middle of the navbar
